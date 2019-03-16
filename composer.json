@@ -9,12 +9,10 @@
         "homepage": "http://www.co-labs.be"
     }],
     "require": {
-        "php": "^5.6"
+
     },
     "require-dev": {
-        "graham-campbell/testbench": "^5.0",
-        "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^6.5"
+
     },
     "autoload": {
         "psr-4": {
