@@ -1,6 +1,6 @@
 {
-    "name": "blok/laravel-utils",
-    "description": "A series of utilites class for Laravel",
+    "name": "blok/utils",
+    "description": "A series of utilites class for PHP",
     "keywords": ["laravel", "framework", "utilities", "blok"],
     "license": "MIT",
     "authors": [{
@@ -9,8 +9,7 @@
         "homepage": "http://www.co-labs.be"
     }],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "5.5.* || 5.6.*"
+        "php": "^5.6"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
