@@ -1,18 +1,12 @@
 <?php namespace Blok\Utils;
 
+use Exception;
 use ReflectionMethod;
 
 /**
- * Array Class with more features
+ * Array utilities
  *
  * You can use it as stand-alone in any Php Project
- *
- * @category Utils
- * @package  Arx
- * @author   Daniel Sum <daniel@cherrypulp.com>
- * @author   Stéphan Zych <stephan@cherrypulp.com>
- * @license  http://opensource.org/licenses/MIT MIT License
- * @link     http://arx.xxx/doc/Arr
  */
 class Arr
 {
