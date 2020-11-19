@@ -131,6 +131,23 @@ class Str
 
         return $excerpt[0];
     } // limit_text_words
+    
+    /**
+     * Extract link from html
+     *
+     * @param   string Html where to extract links
+     *
+     * @return  array
+     */
+    public static function linkExtractor($html)
+    {
+        $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>(.*)<\/a>";
+        if (preg_match_all("/$regexp/siU", $html, $matches)) {
+            return $matches;
+        }
+
+        return [];
+    }
 
     /**
      * Check that a string begin with a specified characters
