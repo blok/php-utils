@@ -20,7 +20,7 @@ composer require blok/utils
 
 Blok\Utils\Arr is a bunch of array related methods utilities that you can use as static call exemple :
 
-`Blok\Utils\Arr::csvToArray('xxx.csv'')`
+`Blok\Utils\Arr::csvToArray('xxx.csv')`
 
 Will transform a csv file to an array
 
