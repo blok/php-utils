@@ -226,10 +226,8 @@ class Utils
         $aErrors = debug_backtrace();
         $aResult = array();
 
-        foreach ($aErrors as $key => $error) {
-            if ($error['function'] == $functionName && !empty($error['line']) && !empty($error['file'])) {
-                $line = $error['line'];
-                $file = $error['file'];
+        foreach ($aErrors as $error) {
+            if ($error['function'] === $functionName && !empty($error['line']) && !empty($error['file'])) {
                 $aResult[] = $error;
             }
         }
