@@ -1,4 +1,6 @@
-<?php namespace Blok\Utils;
+<?php
+
+namespace Blok\Utils;
 
 /**
  * Strings
@@ -53,13 +55,16 @@ class Str
     } // excerpt
 
 
+    /**
+     * @throws \Exception
+     */
     public static function genChar($size, $char = 'abcdefghijklmnopqrstuvxzkwyABCDEFGHIJKLMNOPQRSTUVXZKWY0123456789_')
     {
         $return = '';
         $max = strlen($char) - 1;
 
         for ($i = 0; $i < $size; $i++) {
-            $return .= substr($char, rand(0, $max), 1);
+            $return .= $char[random_int(0, $max)];
         }
 
         return $return;
@@ -131,7 +136,7 @@ class Str
 
         return $excerpt[0];
     } // limit_text_words
-    
+
     /**
      * Extract link from html
      *

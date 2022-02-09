@@ -19,7 +19,10 @@
             "homepage": "http://www.cherrypulp.com"
         }
     ],
-    "autoload": {
+  "require": {
+    "kint-php/kint" : "^4.1"
+  },
+  "autoload": {
         "psr-4": {
             "Blok\\Utils\\": "src/"
         }

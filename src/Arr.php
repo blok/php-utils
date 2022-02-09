@@ -1,4 +1,6 @@
-<?php namespace Blok\Utils;
+<?php
+
+namespace Blok\Utils;
 
 use Exception;
 use ReflectionMethod;
@@ -35,8 +37,7 @@ class Arr
             }
         }
         fclose($f) or ("Can't close php://output");
-        $str = ob_get_contents();
-        ob_end_clean();
+        $str = ob_get_clean();
 
         if (!$downloadFile) {
             return $str;
@@ -49,7 +50,7 @@ class Arr
      * Array_assign_key assign the key
      *
      * @param $arr
-     * @param string $sKeyOrArray
+     * @param string|mixed $sKeyOrArray
      * @return array
      * @internal param mixed $data
      */
