@@ -13,7 +13,7 @@ trait HasModelUtilityTrait
 {
     use SingletonTrait;
 
-    public static $structure;
+    public static $_structure;
 
     /**
      * Prepare input for query
@@ -83,11 +83,11 @@ trait HasModelUtilityTrait
      */
     public static function getStructure()
     {
-        if(!static::$structure){
-            static::$structure = \DB::getDoctrineSchemaManager()->listTableColumns(static::getInstance()->getTable());
+        if(!static::$_structure){
+            static::$_structure = \DB::getDoctrineSchemaManager()->listTableColumns(static::getInstance()->getTable());
         }
 
-        return static::$structure;
+        return static::$_structure;
     }
 
 }

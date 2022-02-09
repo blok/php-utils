@@ -12,10 +12,6 @@ use Illuminate\Foundation\AliasLoader;
  */
 trait ServiceProviderTrait {
 
-    protected $commands = [];
-    protected $providers = [];
-    protected $facades = [];
-
     /**
      * Register commands helper
      */
