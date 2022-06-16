@@ -435,6 +435,24 @@ class Arr
     }
 
     /**
+     * Helpers to transform GoogleSpreadsheet url into array
+     *
+     * @param $file
+     * @param $param
+     * @return array
+     */
+    public static function spreadsheetToArray($spreadsheetUrl, $param = array(
+        'length' => 0,
+        'delimiter' => ',',
+        'enclosure' => '"',
+        'escape' => '\\',
+        'skipFirstRow' => true,
+        'indexFromFirstRow' => true
+    )){
+        return self::csvToArray($spreadsheetUrl, $param);
+    }
+
+    /**
      * Unsets dot-notated key from an array.
      *
      * @param array &$aSearch The search array
