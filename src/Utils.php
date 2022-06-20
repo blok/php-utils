@@ -582,7 +582,27 @@ class Utils
 
         exit;
     } // k
+    
+    /**
+     * Shortest way to ping an url code and retrieve execution time
+     *
+     * @param $url
+     * @return array
+     */
+    public static function pingUrl($url)
+    {
+        $handle = curl_init($url);
+        curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_exec($handle);
+        $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+        $info = curl_getinfo($handle);
+        curl_close($handle);
 
+        return [
+            'time' => $info['total_time'],
+            'code' => $httpCode,
+        ];
+    }
 
     public static function predie()
     {
